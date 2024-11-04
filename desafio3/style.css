@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Reset das configurações padrões */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Cor do fundo e cor da fonte */
+body {
+    background-color: #1B2029;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* limitando a parte 'principal' */
+.wrapper {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper h1 {
+    color: #8880FE;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.wrapper .alternative span {
+    color: #999999;
+    font-size: 1.1rem;
+    font-weight: 400;
+    position: relative;
+}
+
+.wrapper .alternative span::before,
+.wrapper .alternative span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background-color: #999999;
+}
+
+.wrapper .alternative span::after {
+    left: 50px;
+}
+
+/* estilizando o form */
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper form label span {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+.wrapper form input {
+    background-color: #161923;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem; /* Corrigido a vírgula */
+    margin-top: 1rem;
+    outline: none;
+    color: #999999;
+    font-size: 1rem;
+    border: 1px solid #161923;
+    border-radius: 8px;
+}
+
+/* Estilizando o select */
+.wrapper form select {
+    background-color: #161923;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: #999999;
+    font-size: 1rem;
+    border: 1px solid #161923;
+    border-radius: 8px;
+    appearance: none; /* Remove o estilo padrão */
+    background-image: url('data:image/png;base64,...'); /* Adicione uma seta personalizada, se quiser */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.button {
+    width: 50%; /* Manter a largura desejada */
+    margin-top: 4rem;
+    display: flex; /* Para centralizar o botão se necessário */
+    justify-content: center; /* Centraliza o botão */
+}
+
+.button button {
+    cursor: pointer;
+    border: none;
+    border-radius: 32px;
+    background: linear-gradient(90deg, #8880FE, #5D57AF); /* Gradiente */
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 20px; /* Aumenta o padding para um botão mais espaçoso */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all .3s ease-in-out;
+    width: 100%; /* Faz o botão ocupar toda a largura da div */
+}
+
+.button button:hover {
+    background: linear-gradient(90deg, #5D57AF, #8880FE); /* Inverte o gradiente no hover */
+    transform: translateY(-3px); /* Efeito de elevação no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+}
+
+.button button:active {
+    transform: translateY(0); /* Anula a elevação ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
+}
